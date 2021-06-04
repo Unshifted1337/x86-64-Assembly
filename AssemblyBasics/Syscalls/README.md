@@ -5,9 +5,13 @@ As we are working with Linux in our code, we will use the system call interface.
 Each system call has a corresponding number. The ones that we will use are:
 
 read -- 0 : read from a file
+
 write -- 1 : write to a file
+
 open -- 2 : open a file
+
 close -- 3 : close a file
+
 We move the number of the system call into rax, move other arguments into other specified registers, and then use syscall to perform the operation.
 
 Think of a syscall as a function -- just a special function that the Linux kernel executes.
