@@ -5,11 +5,15 @@ Sections are parts of an executable that have different purposes. They are separ
 We will be using the following sections:
 
 rodata : read only memory
-data : read and writable memory
-bss : memory allocated upon program execution
-The Linux kernel allocates this memory when we run the process, but the values aren't actually stored in the executable file as in the data and rodata sections. You don't have to worry too much about what this means.
-This section is typically used for global arrays and other large contiguous data structures in memory that don't have a predefined value at compile time.
-text : code that is executed during runtime
-You can think of the rodata section as storing global, constant variables; the data section as storing ordinary global variables, and the bss section as storing global arrays with uninitialized memory at the start of program execution.
 
-Writing Assembly
+data : read and writable memory
+
+bss : memory allocated upon program execution
+
+The Linux kernel allocates this memory when we run the process, but the values aren't actually stored in the executable file as in the data and rodata sections. You don't have to worry too much about what this means.
+
+This section is typically used for global arrays and other large contiguous data structures in memory that don't have a predefined value at compile time.
+
+text : code that is executed during runtime
+
+You can think of the rodata section as storing global, constant variables; the data section as storing ordinary global variables, and the bss section as storing global arrays with uninitialized memory at the start of program execution.
